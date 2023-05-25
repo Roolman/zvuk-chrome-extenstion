@@ -12,7 +12,7 @@ chrome.action.onClicked.addListener(async () => {
 
   if (nextState === "ON") {
     chrome.contextMenus.create({
-      id: "228",
+      id: "229",
       title: "Слушать в Звуке",
       type: "normal",
       contexts: ["selection"],
