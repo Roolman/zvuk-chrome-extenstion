@@ -1,6 +1,6 @@
 {
   "name": "zvuk-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly search in Zvuk",
   "main": "app.js",
   "scripts": {
