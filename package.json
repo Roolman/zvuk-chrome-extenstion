@@ -4,10 +4,11 @@
   "description": "Quickly search in Zvuk",
   "main": "app.js",
   "scripts": {
-    "build": "npm run compile && npm run copy",
+    "build": "npm run compile && npm run copyManifest && npm run copyAssets",
     "compile": "tsc src/*.ts --outDir app --target ESNext",
-    "copy": "cp manifest.json app",
-    "watch": "nodemon src/*.ts --exec \"npm run build\"",
+    "copyManifest": "cp manifest.json app",
+    "copyAssets": "cp assets/* app",
+    "watch": "npm run copyAssets && nodemon src/*.ts --exec \"npm run compile\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
