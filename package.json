@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "build": "npm run compile && npm run copyManifest && npm run copyAssets",
+    "watch": "npm run copyAssets && nodemon src/*.ts --exec \"npm run compile\"",
     "compile": "tsc src/*.ts --outDir app --target ESNext",
     "copyManifest": "cp manifest.json app",
     "copyAssets": "cp assets/* app",
-    "watch": "npm run copyAssets && nodemon src/*.ts --exec \"npm run compile\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
