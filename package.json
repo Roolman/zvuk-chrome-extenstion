@@ -4,7 +4,9 @@
   "description": "Quickly search in Zvuk",
   "main": "app.js",
   "scripts": {
-    "build": "tsc src/*.ts --outDir app --target ESNext",
+    "build": "npm run compile && npm run copy",
+    "compile": "tsc src/*.ts --outDir app --target ESNext",
+    "copy": "cp manifest.json app",
     "watch": "nodemon src/*.ts --exec \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
