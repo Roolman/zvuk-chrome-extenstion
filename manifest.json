@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Звук поиск",
+  "description": "Быстрый поиск в сервисе Звук",
+  "version": "0.1.1",
+  "icons": { 
+    "16": "icon.png",
+    "96": "icon.png" 
+  },
+  "action": {
+      "default_icon": "icon_grayscale.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "contextMenus"
+  ]
+}

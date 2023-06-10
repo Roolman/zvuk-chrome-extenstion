@@ -1,11 +1,14 @@
 {
   "name": "zvuk-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly search in Zvuk",
   "main": "app.js",
   "scripts": {
-    "build": "tsc src/*.ts --outDir app --target ESNext",
-    "watch": "nodemon src/*.ts --exec \"npm run build\"",
+    "build": "npm run compile && npm run copyManifest && npm run copyAssets",
+    "watch": "npm run copyAssets && nodemon src/*.ts --exec \"npm run compile\"",
+    "compile": "tsc src/*.ts --outDir app --target ESNext",
+    "copyManifest": "cp manifest.json app",
+    "copyAssets": "cp assets/* app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
